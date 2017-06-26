@@ -3,8 +3,8 @@
 #include <iostream>
 #include <locale>
 #include <math.h> //utilizada para a funcao sin(), para calculo do seno
-#include <stdlib.h> //utilizada para a funcao getchar(), pausa a execucao do programa
-#include <stdio.h> //utilizada para a funcao system(), com o comando "clear" quando for linux ou "cls" quando for windows
+#include <cstdlib> //utilizada para a funcao system(), com o comando "clear" quando for linux ou "cls" quando for windows
+#include <stdio.h>//utilizada para a funcao getchar(), pausa a execucao do programa 
 
  using namespace std;
 
