@@ -69,6 +69,7 @@ double func4(double x){
  void menu(int a, int b, int opc){
 	 //vetor para calcular os retangulos
 	 int quantidadeRetangulos[] = {5,10,50,100,500,10000};
+	
 	double n = 0;
 	cout<<"============================================================"<<endl;
 	cout<<"|	n	|                             |  Integral  |"<<endl;
@@ -80,12 +81,13 @@ double func4(double x){
 }
  //funcao principal
 int main(){
+	char limpar[] = "clear";
 	int opc;
 	setlocale(LC_ALL, "Portuguese");
 	//enquanto o usuario nao digitar 4 pra sair, a tela entra em loop..
 	while (opc != 5){
 	cout << "QUAL A FUNCAO A REALIZAR O CALCULO DA INTEGRAL?\n\n";
-	cout << "1 - f(x) = (x^3 / 3) / 3 \t\t(intervalo a = -1 e b = 2)\n2 - f(x) = 4 - (x^2) / 2 \t\t(intervalo a = -4 e b = 4\n3 - f(x) = 1 / x\t\t\t(intervalo a = 1 e b = 3)";
+	cout << "1 - f(x) = (x^3 / 3) / 3 \t\t(intervalo a = -1 e b = 2)\n2 - f(x) = 4 - (x^2) / 4 \t\t(intervalo a = -4 e b = 4\n3 - f(x) = 1 / x\t\t\t(intervalo a = 1 e b = 3)";
 	cout << "\n4 - f(x) = x^2\t\t\t\t(intervalo a = 1 e b = 3)";
 	cout << "\n5 - SAIR";
 	cout << "\nDigite a Opcao: ";
@@ -96,30 +98,30 @@ int main(){
 				menu(-1, 2, 1);
 				getchar();
 				//system("cls");
-				system("clear");
+				system(limpar);
 				break;
 			case 2:
 				menu(-4, 4, 2);
 				getchar();
 				//system("cls");
-				system("clear");
+				system(limpar);
 				break;
 			case 3:
 				menu(1, 3, 3);
 				getchar();
 				//system("cls");
-				system("clear");
+				system(limpar);
 				break;
 			case 4:
 				menu(1, 3, 4);
 				getchar();
 				//system("cls");
-				system("clear");
+				system(limpar);
 				break;
 			case 5:
 				break;
 			default:
-				system("clear");
+				system(limpar);
 				cout << "Opcao Invalida\n";
 				break;
 		}
