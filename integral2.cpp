@@ -11,17 +11,20 @@
 // função da integral da primeira opcao
 double func1(double x){
 
-    return 1 / x;
+    return (pow(x,3) / 3);
 
 }
 //funcao integral da segunda opcao
 double func2(double x){
-		double valor = x * x * x; // x³ equivalente a x ao cubo
-		return sin(valor);
+		return 4 - (pow(x,2)/2);
 }
 
 double func3(double x){
-	return 4 + 3 *(x*x); //4+3x²
+	
+	return 1 / x;
+}
+double func4(double x){
+		return(x*x);
 }
 // calculo do delta x
  double deltax (double aa,double bb, double nn){
@@ -29,7 +32,7 @@ double func3(double x){
     return (bb - aa) / nn;
 
  }
-//funcao para calcular o valor da integral com a regra do ponto medio
+//funcao para calcular a integral com a regra do ponto medio
  double integral(int n, double aa, double bb, int opc){
 	double xi[n];
     // Intervalos
@@ -51,6 +54,8 @@ double func3(double x){
 			sfunc += func2((xi[i-1]+xi[i])/2);
 		else if (opc == 3)
 			sfunc += func3((xi[i-1]+xi[i])/2);
+		else if (opc == 4)
+			sfunc += func4((xi[i-1]+xi[i])/2);
 		else
 			cout << "opcao invalida";
 	}
@@ -78,33 +83,40 @@ int main(){
 	int opc;
 	setlocale(LC_ALL, "Portuguese");
 	//enquanto o usuario nao digitar 4 pra sair, a tela entra em loop..
-	while (opc != 4){
+	while (opc != 5){
 	cout << "QUAL A FUNCAO A REALIZAR O CALCULO DA INTEGRAL?\n\n";
-	cout << "1 - f(x) = 1/x \t\t(intervalo a = 1 e b = 2)\n2 - f(x) = sen(x^3)\t(intervalo a = 1 e b = 2\n3 - f(x) = 4 + 3x^2\t(intervalo a = 0 e b = 1)";
-	cout << "\n4 - SAIR";
+	cout << "1 - f(x) = (x^3 / 3) / 3 \t\t(intervalo a = -1 e b = 2)\n2 - f(x) = 4 - (x^2) / 2 \t\t(intervalo a = -4 e b = 4\n3 - f(x) = 1 / x\t\t\t(intervalo a = 1 e b = 3)";
+	cout << "\n4 - f(x) = x^2\t\t\t\t(intervalo a = 1 e b = 3)";
+	cout << "\n5 - SAIR";
 	cout << "\nDigite a Opcao: ";
 	cin >> opc;
 	//executa as opcoes de acordo com a escolha do usuario
 	switch (opc){
 			case 1:
-				menu(1, 2, 1);
+				menu(-1, 2, 1);
 				getchar();
 				//system("cls");
 				system("clear");
 				break;
 			case 2:
-				menu(1, 2, 2);
+				menu(-4, 4, 2);
 				getchar();
 				//system("cls");
 				system("clear");
 				break;
 			case 3:
-				menu(0, 1, 3);
+				menu(1, 3, 3);
 				getchar();
 				//system("cls");
 				system("clear");
 				break;
 			case 4:
+				menu(1, 3, 4);
+				getchar();
+				//system("cls");
+				system("clear");
+				break;
+			case 5:
 				break;
 			default:
 				system("clear");
