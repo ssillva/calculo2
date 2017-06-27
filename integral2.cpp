@@ -16,7 +16,7 @@ double func1(double x){
 }
 //funcao integral da segunda opcao
 double func2(double x){
-		return 4 - (pow(x,2)/2);
+		return 4 - (pow(x,2)/4);
 }
 
 double func3(double x){
