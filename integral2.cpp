@@ -82,7 +82,7 @@ double func4(double x){
 }
  //funcao principal
 int main(){
-	char limpar[] = "clear";
+	char limpar[] = "clear"; //utilize a palavra "clear" para Linux e "cls" se for Windows
 	int opc;
 	setlocale(LC_ALL, "Portuguese");
 	//enquanto o usuario nao digitar 5 pra sair, a tela entra em loop..
