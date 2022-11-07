@@ -1,2 +1,3 @@
 # calculo2
-Cálculo integral para 3 funções diferentes
+Cálculo integral para 4 funções diferentes da Disciplina de Cálculo 2.
+
